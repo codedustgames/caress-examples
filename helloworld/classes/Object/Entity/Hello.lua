@@ -9,8 +9,6 @@ local graphicsDevice
 
 -- Entities have a parent, belong to a layer and receive a coroutine handler
 -- so they can yield and give other entities a chance to update and draw.
--- This init() is actually optional as it only calls it's parent, but I
--- included it here for clarity.
 function _class:init(parent, layer, coh)
   -- Entity.lua does not need a coroutine handler
   self.super:init(parent, layer)

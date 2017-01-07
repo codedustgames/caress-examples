@@ -22,7 +22,7 @@ end
 
 function _class:main(coh)
   -- self:create() creates an entity, adds it as a child and starts it
-  local hello = self:create(Hello, self.layers.default, coh)
+  local hello = self:create(Hello, self.layers.default, coh):start()
   -- Wait for it to finish
   coh:event(hello, "finished"):wait()
   -- Destroy it, i.e. removes from child list and does some cleanup

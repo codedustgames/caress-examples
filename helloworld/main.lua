@@ -6,10 +6,6 @@
 --
 -- @module main
 
--- Adjust package.path to current project structure
-package.path = "lib/?.lua;lib/?/init.lua;" .. package.path
-
--- Local variable for faster access
 local CONFIG = _CONFIG
 
 local Vector    = require("caress/Vector")
@@ -40,8 +36,8 @@ _game = nil
 local game
 
 function love.load()
-  -- Load caress's standard classes library
-  classes:loadClassesByDir("lib/caress/classeslib")
+  -- Load caress's standard class library
+  classes:loadClassesByDir("caress/classeslib")
   -- Load our project custom classes
   classes:loadClassesByDir("classes")
 
@@ -62,7 +58,7 @@ function love.load()
   
   -- Create a game instance inplace so a reference for it is available before
   -- it's totally constructed, specially because it needs to exist during it's
-  -- init().
+  -- own init().
   _game = {}
   game = _game
   
