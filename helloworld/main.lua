@@ -40,6 +40,8 @@ function love.load()
   classes:loadClassesByDir("caress/classeslib")
   -- Load our project custom classes
   classes:loadClassesByDir("classes")
+  -- Mandatory step, process loaded classes
+  classes:finish()
 
   -- Get the game subclass
   local gameClasses = classes.Object.Entity.Game:getSubclasses()
