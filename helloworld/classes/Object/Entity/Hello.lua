@@ -11,7 +11,7 @@ local graphicsDevice
 -- so they can yield and give other entities a chance to update and draw.
 function _class:init(parent, layer, coh)
   -- Entity.lua does not need a coroutine handler
-  self.super("init", parent, layer)
+  self.super:init(parent, layer)
 
   game = _game
   graphicsDevice = game.graphicsDevice

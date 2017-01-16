@@ -17,7 +17,7 @@ function _class:init(CONFIG)
 
   -- Game.lua creates a GraphicsDevice available at self.graphicsDevice and
   -- a input device at self.input
-  self.super("init", CONFIG, layers)
+  self.super:init(CONFIG, layers)
 end
 
 function _class:main(coh)
